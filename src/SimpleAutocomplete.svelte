@@ -322,7 +322,7 @@
       return userEnteredText
     }
 
-    const textFiltered = userEnteredText.replace(/[&/\\#,+()$~%.'":*?<>{}]/g, " ").trim()
+    const textFiltered = userEnteredText/*.replace(/[&/\\#,+()$~%.'":*?<>{}]/g, " ")*/.trim()
 
     const cleanUserEnteredText = safeStringFunction(textCleanFunction, textFiltered)
     const textFilteredLowerCase = cleanUserEnteredText.toLowerCase().trim()
